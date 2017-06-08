@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class SearchComponent implements OnInit {
     zipcode: any = '';
     zipform: FormGroup;
-    outgoingData: EventEmitter<string>;
     disabled: boolean;
     constructor(private fb: FormBuilder, private _zipcodeService: ZipcodeService, private router: Router) {
     }
@@ -45,7 +44,5 @@ export class SearchComponent implements OnInit {
     onSubmit(): void {
         let zipcode = this.zipform.get('zip').value;
         this._zipcodeService.publishData(zipcode);
-        this.outgoingData = new EventEmitter<string>();
-        this.outgoingData.emit(zipcode);
     }
 }
