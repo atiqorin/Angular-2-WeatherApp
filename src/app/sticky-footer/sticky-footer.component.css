@@ -1,0 +1,27 @@
+@media screen and (min-height: 570px){
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+    }
+}
+@media screen and (max-height: 570px){
+    .footer {
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+    }
+}
+@media screen and (max-width: 767px){
+    .footer .row > div {
+        text-align: center !important;
+    }
+    .footer {
+        position: relative;
+        height: 105px
+    }
+}
