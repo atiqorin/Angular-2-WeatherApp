@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Jsonp, Http } from '@angular/http';
+import { Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -10,7 +10,7 @@ import { WEATHER_KEY, WEATHER_ROOT } from '../constants/constants';
 @Injectable()
 export class WeatherService {
 
-    constructor(private jsonp: Jsonp, private http: Http) { }
+    constructor(private jsonp: Jsonp) { }
 
 
     getCurrentWeather(zip: number): Observable<any> {
